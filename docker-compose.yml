@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  rust_server:
+    image: "didstopia/rust-server"
+    ports:
+      - "28015:28015"
+      - "28016:28016"
+    volumes:
+      - ./rust:/steamcmd/rust
+    env_file:
+      - .env
