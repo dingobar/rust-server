@@ -4,7 +4,9 @@ services:
     image: "didstopia/rust-server"
     ports:
       - "28015:28015"
+      - "28015:28015/udp"
       - "28016:28016"
+      - "8080:8080"
     volumes:
       - ./rust:/steamcmd/rust
     env_file:
